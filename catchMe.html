@@ -1,9 +1,13 @@
+
+
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>	 	Catch me	</title>
-	
-	<style>
+
+   <title>My First Page</title>
+   
+   <style>
 		div {
 			width: 100px;
             height: 100px;
@@ -17,40 +21,34 @@
 	to   { background-color: blue; }
 	}
 	</style>
-	
-	<script>
-		var y = document.getElementById("#demo");
-		if(y=="null")
-		y.innerHTML = "hye ";
-		
-		function myFunction(){
-			  var x = document.getElementById("#demo");
-			  x.style.WebkitAnimation = "mymove 2s 4"; // Code for Chrome, Safari and Opera
-			//x.style.animation = "mymove 4s 2";    Standard syntax
-		}
-		
-		function setRandomAnimationPixelValues(){
-		    var x = document.querySelector("#demo");
-			x.style.top =  Math.floor(Math.random() * 200 ) + "px";
-			//x.style.margin.right =  Math.floor(Math.random() * 200 + 0) + "s";//red.style.animationDuration = Math.floor(Math.random() * 200 + 0) + "s";
-			//x.style.margin.bottom =  Math.floor(Math.random() * 200 + 0) + "s";
-			x.style.left =  Math.floor(Math.random() * 200 ) + "px";
-			
-		}
-		document.getElementById("#demo").addEventListener( "webkitAnimationIteration", setRandomAnimationPixelValues, 0);
-			
-	</script>
-	
+   
+   <script>
+   
+   var stopId=setInterval(randpos, 1000);
+   function randpos(){
+		var x = document.querySelector("#demo");
+		x.style.top =  Math.floor(Math.random() * 400 ) + "px";
+		x.style.left =  Math.floor(Math.random() * 400 ) + "px";
+   }
+   
+   function stopMe() {
+        clearInterval(stopId);
+   }
+   function youWin(){
+        alert("Hey,you wonnnnnnnnnnn!");
+    }
+   
+   
+ </script>
+   
 </head>
 
 <body>
-<h1> Catch Me!</h1>
 
-	
-	<div  id="demo" onclick="myFunction();"> click me</div>
-	
-	
+<h1>Heading</h1>
+<div  id="demo" onclick="stopMe(); youWin();"> click me</div>
 
-<body>
+
+</body>
 
 </html>
