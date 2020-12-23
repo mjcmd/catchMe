@@ -56,7 +56,7 @@ function getHeight() {
 	function loop() {
     if (flag==false) return;
     randpos();
-    setTimeout(loop, 300);
+    setTimeout(loop, 400);
 	}
 
 
