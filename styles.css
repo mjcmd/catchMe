@@ -74,11 +74,11 @@
 		
 	#cpwrt {
 		margin: 0;
-    //background: green;
 	font-family: Arial, sans-serif;
     position: absolute;
     top: 90%;
     left: 50%;
+    text-align : center ;
     margin-right: -50%;
     transform: translate(-50%, -50%) 
         }
@@ -115,25 +115,25 @@
     transform: translate(-50%, -50%);
 	text-shadow: 5px 5px  5px black;
 	}
-	#info {
+#info {
 	font-size: 25px; 
 	cursor: pointer; 
 	color : #66ffcc; 
 	left: 90%;
 	margin: 0;
-    //background-color : green;
+       //background-color : green;
 	font-family: 'Brush Script MT', cursive;
-    position: absolute;
-    top: 5%;
-    left: 97%;
-    margin-right: -3%;
-    transform: translate(-50%, -50%)
+    	position: absolute;
+    	top: 5%;
+    	left: 97%;
+    	margin-right: -3%;
+    	transform: translate(-50%, -50%)
 	}
 		
 		div {
 		    
 			width: 137px;   <!--0px-->
-            height: 133px;
+           		height: 133px;
 			background-color: yellow;
 			position: relative;
 			font-size: 20px;   <!--    may be removed-->
