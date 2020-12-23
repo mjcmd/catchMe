@@ -25,11 +25,29 @@
    }
    //canvas.width = window.innerWidth;
            // canvas.height = window.innerHeight;
-   
+   function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
+
+function getHeight() {
+  return Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.documentElement.clientHeight
+  );
+}
    function randpos(){
 		var x = document.querySelector("#santa");
-		x.style.top =  Math.floor(Math.random() * (screen.availHeight - 350) + 20) + "px";
-		x.style.left =  Math.floor(Math.random() * (screen.availWidth-150) ) + "px";
+		x.style.top =  Math.floor(Math.random() * (getHeight()-200) + 100 ) + "px";
+		x.style.left =  Math.floor(Math.random() * (window.innerWidth)-200 ) + "px";
    }
    var flag = true;
    function stop() {
